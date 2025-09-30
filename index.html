@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Sederhana</title>
+  <script>
+    function kalkulator() {
+      let angka1 = parseFloat(prompt("Masukkan angka pertama:"));
+      let operator = prompt("Masukkan operator (+, -, *, /):");
+      let angka2 = parseFloat(prompt("Masukkan angka kedua:"));
+      let hasil;
+
+      switch(operator) {
+        case "+":
+          hasil = angka1 + angka2;
+          break;
+        case "-":
+          hasil = angka1 - angka2;
+          break;
+        case "*":
+          hasil = angka1 * angka2;
+          break;
+        case "/":
+          if (angka2 !== 0) {
+            hasil = angka1 / angka2;
+          } else {
+            alert("Error: Tidak bisa dibagi dengan nol!");
+            return;
+          }
+          break;
+        default:
+          alert("Operator tidak dikenali!");
+          return;
+      }
+
+      alert("Hasil: " + hasil);
+    }
+  </script>
+</head>
+<body>
+  <h2>Kalkulator dengan Alert</h2>
+  <button onclick="kalkulator()">Hitung</button>
+</body>
+</html>
+
+
+
